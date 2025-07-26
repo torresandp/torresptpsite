@@ -180,8 +180,9 @@ export default function TaxFormsPage() {
           <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help with Tax Forms?</h2>
             <p className="text-xl mb-6 text-amber-100">
-              Don't navigate complex tax forms alone. Our certified professionals are here to help you understand and complete any tax document.
+              Don&#39;t navigate complex tax forms alone. Our certified professionals are here to help you understand and complete any tax document.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => setIsBookingOpen(true)}
