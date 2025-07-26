@@ -32,7 +32,6 @@ export default function Contact() {
         },
         body: new URLSearchParams({
           'form-id': 'contact-form',
-          'email': 'richard.torres@torresptp.com',
           'name': formData.name,
           'email': formData.email,
           'phone': formData.phone,
