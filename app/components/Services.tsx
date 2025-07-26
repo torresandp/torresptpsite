@@ -227,7 +227,7 @@ export default function Services() {
 
               <div className="bg-gradient-to-r from-amber-50 to-amber-100/50 rounded-2xl p-6 border border-amber-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Ready to Get Started?</h3>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                
                 <p className="text-gray-600 mb-4">
                   Contact us today to schedule a free consultation and learn how we can help you with {selectedService.title.toLowerCase()}.
                 </p>
