@@ -3,9 +3,8 @@
 'use client';
 
 import { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'; // You can keep this import if BookingModal or other components rely on it, but the Footer component itself will be removed from here.
-import BookingModal from '../components/BookingModal';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer'; // You can keep this import if BookingModal or other components rely on it, but the Footer component itself will be removed from here.
 
 export default function TaxFormsPage() {
   // ... (state and data definitions) ...
