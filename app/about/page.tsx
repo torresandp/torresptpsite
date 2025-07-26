@@ -2,15 +2,13 @@
 
 export default function About() {
   const achievements = [
-    { number: '500+', label: 'Satisfied Clients', icon: 'ri-user-star-line' },
-    { number: '15+', label: 'Years Experience', icon: 'ri-award-line' },
+    { number: '100+', label: 'Satisfied Clients', icon: 'ri-user-star-line' },
+    { number: '5+', label: 'Years Experience', icon: 'ri-award-line' },
     { number: '99%', label: 'Client Retention', icon: 'ri-heart-line' },
     { number: '24/7', label: 'Support Available', icon: 'ri-customer-service-line' }
   ];
 
   const certifications = [
-    { name: 'Certified Public Accountant (CPA)', abbr: 'CPA' },
-    { name: 'Enrolled Agent (EA)', abbr: 'EA' },
     { name: 'QuickBooks ProAdvisor', abbr: 'QPA' },
     { name: 'Tax Professional', abbr: 'TP' }
   ];
@@ -28,8 +26,8 @@ export default function About() {
             </div>
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              With over 15 years of dedicated service in tax preparation and bookkeeping, T&P Professional Services 
-              has established itself as a trusted partner for individuals and businesses throughout Lehigh County, PA.
+              With over 5 years of dedicated service in tax preparation and bookkeeping, T&P Professional Services 
+              has established itself as a trusted partner for individuals and businesses throughout Lehigh County and Northampton County, PA.
             </p>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
