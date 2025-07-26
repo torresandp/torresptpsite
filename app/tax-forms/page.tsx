@@ -112,7 +112,7 @@ export default function TaxFormsPage() {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {searchTerm === '' && selectedCategory === 'all' && (
           <div className="mb-16">
