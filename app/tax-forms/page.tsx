@@ -11,7 +11,7 @@ export default function TaxFormsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const taxForms = [
-    { name: 'Form 1040', title: 'U.S. Individual Income Tax Return', category: 'individual', popular: true },
+    { name: 'Form 1040', title: 'U.S. Individual Income Tax Return', category: 'individual', popular: true, url: 'https://www.irs.gov/pub/irs-pdf/f1040.pdf' },
     { name: 'Schedule 1', title: 'Additional Income and Adjustments to Income', category: 'individual' },
     { name: 'Schedule 2', title: 'Additional Taxes', category: 'individual' },
     { name: 'Schedule 3', title: 'Additional Credits and Payments', category: 'individual' },
@@ -172,10 +172,19 @@ export default function TaxFormsPage() {
                       </span>
                     </div>
                   </div>
+                  {form.url && (
+                  <div className="mt-4">
+                    <a 
+                      href={form.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block text-amber-600 font-semibold hover:underline text-sm">
+                      View Form (PDF)
+                    </a>
+                  </div>
+                )}
                 </div>
-              ))}
-            </div>
-          </div>
+                ))}
 
           <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help with Tax Forms?</h2>
