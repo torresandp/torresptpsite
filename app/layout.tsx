@@ -1,47 +1,35 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pacifico } from "next/font/google";
-import "./globals.css";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+// app/tax-forms/page.tsx
 
-const pacifico = Pacifico({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-pacifico',
-});
+'use client';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer'; // You can keep this import if BookingModal or other components rely on it, but the Footer component itself will be removed from here.
+import BookingModal from '../components/BookingModal';
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export default function TaxFormsPage() {
+  // ... (state and data definitions) ...
 
-export const metadata: Metadata = {
-  title: "Torres & P. PTP LLC",
-  description: "Torres & P. All rights reserved.",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
-      >
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <SpeedInsights />
-      </body>
-    </html>
+    <>
+      <Navigation /> {/* Navigation is also in layout, you might want to remove it from here too */}
+      <div className="pt-20 min-h-screen bg-gradient-to-br from-amber-50 to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* ... all your page content ... */}
+
+          <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center">
+            {/* ... call to action section ... */}
+          </div>
+        </div>
+      </div>
+
+      {/* REMOVE THE FOOTER FROM HERE: */}
+      {/* <Footer /> */}
+
+      <BookingModal
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+      />
+    </>
   );
 }
