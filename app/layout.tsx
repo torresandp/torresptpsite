@@ -5,7 +5,7 @@
 import { useState } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer'; // You can keep this import if BookingModal or other components rely on it, but the Footer component itself will be removed from here.
-import BookingModal from "./components/BookingModal";
+//import BookingModal from "./components/BookingModal";
 
 export default function TaxFormsPage() {
   // ... (state and data definitions) ...
@@ -25,11 +25,5 @@ export default function TaxFormsPage() {
 
       {/* REMOVE THE FOOTER FROM HERE: */}
       {/* <Footer /> */}
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
-    </>
   );
 }
