@@ -141,51 +141,51 @@ export default function TaxFormsPage() {
           )}
 
           <div className="mb-16">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">
-                {selectedCategory === 'all' ? 'All Tax Forms' : `${categories.find(c => c.id === selectedCategory)?.name} Forms`}
-              </h2>
-              <span className="text-gray-600">{filteredForms.length} forms found</span>
-            </div>
-            
-            <div className="grid grid-cols-1 gap-4">
-              {filteredForms.map((form, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                        <i className="ri-file-text-line text-amber-600"></i>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">{form.name}</h3>
-                        <p className="text-gray-600 text-sm">{form.title}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      {form.popular && (
-                        <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold">
-                          Popular
-                        </span>
-                      )}
-                      <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold capitalize">
-                        {form.category}
-                      </span>
-                    </div>
-                  </div>
-                  {form.url && (
-                  <div className="mt-4">
-                    <a 
-                      href={form.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-block text-amber-600 font-semibold hover:underline text-sm">
-                      View Form (PDF)
-                    </a>
-                  </div>
-                )}
-                </div>
-              ))}
-            </div> {/* This was the missing closing div */}
+             <div className="flex items-center justify-between mb-8">
+               <h2 className="text-3xl font-bold text-gray-900">
+                 {selectedCategory === 'all' ? 'All Tax Forms' : `${categories.find(c => c.id === selectedCategory)?.name} Forms`}
+               </h2>
+               <span className="text-gray-600">{filteredForms.length} forms found</span>
+             </div>
+             
+             <div className="grid grid-cols-1 gap-4">
+               {filteredForms.map((form, index) => (
+                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+                   <div className="flex items-center justify-between">
+                     <div className="flex items-center">
+                       <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4">
+                         <i className="ri-file-text-line text-amber-600"></i>
+                       </div>
+                       <div>
+                         <h3 className="text-lg font-bold text-gray-900">{form.name}</h3>
+                         <p className="text-gray-600 text-sm">{form.title}</p>
+                       </div>
+                     </div>
+                     <div className="flex items-center space-x-3">
+                       {form.popular && (
+                         <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold">
+                           Popular
+                         </span>
+                       )}
+                       <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold capitalize">
+                         {form.category}
+                       </span>
+                     </div>
+                   </div>
+                   {form.url && (
+                   <div className="mt-4">
+                     <a 
+                       href={form.url} 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="inline-block text-amber-600 font-semibold hover:underline text-sm">
+                       View Form (PDF)
+                     </a>
+                   </div>
+                 )}
+                 </div>
+               ))}
+            </div> {/* This closing div was missing */}
 
           <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help with Tax Forms?</h2>
