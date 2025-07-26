@@ -61,13 +61,12 @@ export default function Navigation() {
                 Tax Forms
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
               </Link>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-gray-700 hover:text-amber-600 font-semibold transition-colors duration-200 cursor-pointer relative group"
-              >
+              <Link href="/about"
+                className="text-gray-700 hover:text-amber-600 font-semibold transition-colors duration-200 cursor-pointer relative group">
                 About
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-              </button>
+              </Link>
+
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="text-gray-700 hover:text-amber-600 font-semibold transition-colors duration-200 cursor-pointer relative group"
