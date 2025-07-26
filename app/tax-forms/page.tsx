@@ -69,18 +69,18 @@ export default function TaxFormsPage() {
   const popularForms = taxForms.filter(form => form.popular);
 
   return (
-  <> {/* ADDED: Opening React Fragment */}
-    <Navigation />
-    <div className="pt-20 min-h-screen bg-gradient-to-br from-amber-50 to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            IRS Tax Forms & Schedules
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Complete directory of IRS tax forms and schedules. We help you understand and prepare all necessary tax documents.
-          </p>
-        </div>
+  <>
+     <Navigation />
+      <div className="pt-20 min-h-screen bg-gradient-to-br from-amber-50 to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              IRS Tax Forms & Schedules
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Complete directory of IRS tax forms and schedules. We help you understand and prepare all necessary tax documents.
+            </p>
+          </div>
 
         <div className="mb-12">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-amber-100">
