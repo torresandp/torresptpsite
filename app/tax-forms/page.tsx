@@ -69,6 +69,7 @@ export default function TaxFormsPage() {
   const popularForms = taxForms.filter(form => form.popular);
 
   return (
+    <Navigation/>
       <div className="pt-20 min-h-screen bg-gradient-to-br from-amber-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-16">
@@ -111,7 +112,7 @@ export default function TaxFormsPage() {
               </div>
             </div>
           </div>
-        </div>
+        
 
         {searchTerm === '' && selectedCategory === 'all' && (
           <div className="mb-16">
