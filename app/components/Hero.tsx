@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import BookingModal from './BookingModal';
+//import BookingModal from './BookingModal';
 import Navigation from './Navigation';
 
 export default function Hero() {
@@ -46,9 +46,8 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
               <button 
-                onClick={() => setIsBookingOpen(true)}
-                className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
+                onClick={() => window.location.href = 'https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled'}
+                className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Schedule Free Consultation
               </button>
               <a 
@@ -75,8 +74,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        
-        <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
       </div>
     </>
   );
