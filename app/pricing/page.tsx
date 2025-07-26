@@ -178,9 +178,9 @@ export default function PricingPage() {
               Every business is unique. Let us create a personalized service package that fits your specific needs and budget.
             </p>
             <button 
-              onClick={() => setIsBookingOpen(true)}
-              className="bg-white text-amber-600 hover:bg-amber-50 px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1 whitespace-nowrap"
-            >
+              onClick={() => window.location.href = 'https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled'}
+              className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
               Schedule Free Consultation
             </button>
           </div>
