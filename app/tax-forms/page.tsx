@@ -148,43 +148,70 @@ export default function TaxFormsPage() {
               <span className="text-gray-600">{filteredForms.length} forms found</span>
             </div>
             
-            <div className="grid grid-cols-1 gap-4">
-              {filteredForms.map((form, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4">
-                        <i className="ri-file-text-line text-amber-600"></i>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">{form.name}</h3>
-                        <p className="text-gray-600 text-sm">{form.title}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      {form.popular && (
-                        <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold">
-                          Popular
-                        </span>
-                      )}
-                      <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold capitalize">
-                        {form.category}
-                      </span>
-                    </div>
-                  </div>
-                  {form.url && (
-                  <div className="mt-4">
-                    <a 
-                      href={form.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-block text-amber-600 font-semibold hover:underline text-sm">
-                      View Form (PDF)
-                    </a>
-                  </div>
-                )}
-                </div>
-                ))}
+           <div className="grid grid-cols-1 gap-4">
+             {filteredForms.map((form, index) => (
+      <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-4">
+              <i className="ri-file-text-line text-amber-600"></i>
+            </div>
+            <div>
+            <h3 className="text-lg font-bold text-gray-900">{form.name}</h3>
+            <p className="text-gray-600 text-sm">{form.title}</p>
+          </div>
+        </div>
+        <div className="flex items-center space-x-3">
+          {form.popular && (
+            <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold">
+              Popular
+            </span>
+          )}
+          <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold capitalize">
+            {form.category}
+          </span>
+        </div>
+      </div>
+      {form.url && (
+        <div className="mt-4">
+          <a 
+            href={form.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block text-amber-600 font-semibold hover:underline text-sm"
+          >
+            View Form (PDF)
+          </a>
+        </div>
+      )}
+    </div>
+  ))}
+</div> {/* Close the .grid container here */}
+
+{/* This should be OUTSIDE of the .map and .grid */}
+            
+<div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center mt-12">
+  <h2 className="text-3xl font-bold mb-4">Need Help with Tax Forms?</h2>
+  <p className="text-xl mb-6 text-amber-100">
+    Do not navigate complex tax forms alone. Our certified professionals are here to help you understand and complete any tax document.
+  </p>
+
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <button 
+      onClick={() => setIsBookingOpen(true)}
+      className="bg-white text-amber-600 hover:bg-amber-50 px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1 whitespace-nowrap"
+    >
+      Schedule Consultation
+    </button>
+    <a 
+      href="tel:(484) 767-1741"
+      className="border-2 border-white text-white hover:bg-white hover:text-amber-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1 whitespace-nowrap"
+    >
+      Call Now: (484) 767-1741
+    </a>
+  </div>
+</div>
+
 
           <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help with Tax Forms?</h2>
