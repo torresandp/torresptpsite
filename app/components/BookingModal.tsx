@@ -50,7 +50,6 @@ export default function BookingModal({ isOpen, onClose, preSelectedService }: Bo
         },
         body: new URLSearchParams({
           'form-id': 'booking-form',
-          'email': 'richard.torres@torresptp.com',
           'name': formData.name,
           'email': formData.email,
           'phone': formData.phone,
