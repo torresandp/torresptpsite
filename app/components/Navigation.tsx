@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import BookingModal from './BookingModal';
+//import BookingModal from './BookingModal';
 
 export default function Navigation() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -78,18 +78,15 @@ export default function Navigation() {
             </div>
             
             <div className="flex items-center">
-              <button 
-                onClick={() => setIsBookingOpen(true)}
-                className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
+              <button onClick={() => window.location.href = 'https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled'}
+                className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Book Consultation
               </button>
+
             </div>
           </div>
         </div>
       </nav>
-      
-      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </>
   );
 }
