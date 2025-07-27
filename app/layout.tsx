@@ -7,7 +7,7 @@ const pacifico = Pacifico({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-pacifico',
-})
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Torres & P. PTP",
-  description: "Torres & P. All right reserved",
+  description: "Torres & P. All rights reserved",
 };
 
 export default function RootLayout({
@@ -31,10 +31,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        {/* ✅ Mobile viewport tag */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased bg-white text-gray-900 min-h-screen w-full`}
       >
-        {children}
+        {/* Optional: Wrap in a responsive container if needed */}
+        <main className="flex flex-col min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );
