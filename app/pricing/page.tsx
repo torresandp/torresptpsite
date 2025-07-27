@@ -3,11 +3,11 @@
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import BookingModal from '../components/BookingModal';
+// Removed BookingModal import
 
 export default function PricingPage() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState('');
+  // Removed isBookingOpen and selectedService state as they are no longer needed
+  // Removed setIsBookingOpen and setSelectedService setters
 
   const pricingPlans = [
     {
@@ -81,9 +81,9 @@ export default function PricingPage() {
     { name: 'Amended Tax Return', price: '$75', period: 'per form', description: 'Corrections to filed returns' }
   ];
 
-  const handleGetStarted = (serviceValue: string) => {
-    setSelectedService(serviceValue);
-    setIsBookingOpen(true);
+  // Modified handleGetStarted function to directly redirect
+  const handleGetStarted = () => {
+    window.location.href = 'https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled';
   };
 
   return (
@@ -119,12 +119,10 @@ export default function PricingPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
-                  {/* MODIFIED PRICE DISPLAY */}
                   <div className="flex items-center justify-center space-x-2">
                     <span className="text-xl font-bold text-amber-600">Starting at</span>
                     <span className="text-4xl font-bold text-amber-600">{plan.price}</span>
                   </div>
-                  {/* END MODIFIED PRICE DISPLAY */}
                 </div>
                 
                 <ul className="space-y-4 mb-8">
@@ -139,7 +137,7 @@ export default function PricingPage() {
                 </ul>
                 
                 <button 
-                  onClick={() => handleGetStarted(plan.serviceValue)}
+                  onClick={handleGetStarted} // No longer passing serviceValue as it's a direct redirect
                   className={`w-full py-4 px-6 rounded-xl font-semibold transition-all duration-300 cursor-pointer transform hover:scale-105 whitespace-nowrap ${
                     plan.highlight 
                       ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-lg hover:shadow-xl' 
@@ -173,24 +171,4 @@ export default function PricingPage() {
           <div className="bg-gradient-to-br from-amber-600 to-amber-700 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Need a Custom Quote?</h2>
             <p className="text-xl mb-6 text-amber-100">
-              Every business is unique. Let us create a personalized service package that fits your specific needs and budget.
-            </p>
-            <button 
-              onClick={() => window.location.href = 'https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled'}
-              className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-              Schedule Free Consultation
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <Footer />
-      <BookingModal 
-        isOpen={isBookingOpen} 
-        onClose={() => setIsBookingOpen(false)}
-        preSelectedService={selectedService}
-      />
-    </>
-  );
-}
+              Every business is unique. Let us create a personalized service package that
