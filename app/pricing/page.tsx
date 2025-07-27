@@ -82,7 +82,7 @@ export default function PricingPage() {
   ];
 
   const handleGetStarted = () => {
-    window.location.href = " https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled';
+    window.location.href = 'https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled';
   };
 
   return (
