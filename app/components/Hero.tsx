@@ -39,7 +39,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-amber-100 mb-10 max-w-4xl mx-auto leading-relaxed font-light">
-              Trusted by over 500 clients across Pennsylvania for comprehensive tax preparation, 
+              Trusted by over 100+ clients across Pennsylvania for comprehensive tax preparation, 
               bookkeeping, and strategic financial consulting. Experience the difference of working 
               with certified professionals who prioritize your financial success.
             </p>
@@ -61,11 +61,11 @@ export default function Hero() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-amber-200/20">
-                <div className="text-3xl font-bold text-amber-200 mb-2">500+</div>
+                <div className="text-3xl font-bold text-amber-200 mb-2">100+</div>
                 <div className="text-amber-100 font-medium">Satisfied Clients</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-amber-200/20">
-                <div className="text-3xl font-bold text-amber-200 mb-2">15+</div>
+                <div className="text-3xl font-bold text-amber-200 mb-2">5+</div>
                 <div className="text-amber-100 font-medium">Years Experience</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-amber-200/20">
