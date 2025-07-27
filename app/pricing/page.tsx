@@ -31,7 +31,7 @@ export default function PricingPage() {
     },
     {
       name: 'Premium Tax Services',
-      price: 'From'+'$275',
+      price: '$275',
       description: 'Comprehensive tax preparation for complex situations',
       features: [
         'All Basic Services Included',
@@ -119,13 +119,12 @@ export default function PricingPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
+                  {/* MODIFIED PRICE DISPLAY */}
                   <div className="flex items-center justify-center space-x-2">
+                    <span className="text-xl font-bold text-amber-600">Starting at</span>
                     <span className="text-4xl font-bold text-amber-600">{plan.price}</span>
-                    <div className="text-left">
-                      <span className="text-sm text-gray-400 line-through block">{plan.originalPrice}</span>
-                      <span className="text-sm text-green-600 font-semibold">Save {Math.round((parseInt(plan.originalPrice.replace('$', '')) - parseInt(plan.price.replace('$', ''))) / parseInt(plan.originalPrice.replace('$', '')) * 100)}%</span>
-                    </div>
                   </div>
+                  {/* END MODIFIED PRICE DISPLAY */}
                 </div>
                 
                 <ul className="space-y-4 mb-8">
