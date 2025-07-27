@@ -21,36 +21,37 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const response = await fetch('https://readdy.ai/api/form-submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          'form-id': 'contact-form',
-          'name': formData.name,
-          'email': formData.email,
-          'phone': formData.phone,
-          'message': formData.message
-        }).toString()
-      });
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitMessage('');
 
-      if (response.ok) {
-        setSubmitMessage('Thank you for your message! We will contact you within 24 hours.');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      } else {
-        setSubmitMessage('There was an error sending your message. Please try again.');
-      }
-    } catch (error) {
+  try {
+    const response = await fetch('https://formspree.io/f/movlwqla', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      }),
+    });
+
+    if (response.ok) {
+      setSubmitMessage('Thank you for your message! We will contact you within 24 hours.');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } else {
       setSubmitMessage('There was an error sending your message. Please try again.');
     }
-    
-    setIsSubmitting(false);
-  };
+  } catch (error) {
+    setSubmitMessage('There was an error sending your message. Please try again.');
+  }
+
+  setIsSubmitting(false);
+};
+
 
   const contactInfo = [
     {
@@ -116,7 +117,7 @@ export default function Contact() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <i className="ri-check-line text-amber-600 text-xl mr-3"></i>
-                  <span className="text-gray-700">Certified professionals with 15+ years experience</span>
+                  <span className="text-gray-700">Certified professionals with 5+ years experience</span>
                 </li>
                 <li className="flex items-center">
                   <i className="ri-check-line text-amber-600 text-xl mr-3"></i>
