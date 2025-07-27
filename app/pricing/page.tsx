@@ -31,8 +31,7 @@ export default function PricingPage() {
     },
     {
       name: 'Premium Tax Services',
-      price: '$275',
-      originalPrice: '$350',
+      price: 'From'+'$275',
       description: 'Comprehensive tax preparation for complex situations',
       features: [
         'All Basic Services Included',
