@@ -95,8 +95,6 @@ export default function Navigation() {
     </nav>
   );
 }
-
-// 💡 Add this Tailwind utility class to globals.css or keep inline:
 const navLinkStyle = `
   text-gray-700 hover:text-amber-600 font-semibold transition-colors duration-200 
   cursor-pointer relative group
