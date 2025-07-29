@@ -27,7 +27,7 @@ export default function About() {
               <div className="mb-8">
                 <span className="text-amber-600 font-semibold text-lg tracking-wide uppercase">About Us</span>
                 <h2 className="text-5xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
-                  Excellence in Financial Services Since 2009
+                  Excellence in Financial Services Since 2020
                 </h2>
               </div>
 
