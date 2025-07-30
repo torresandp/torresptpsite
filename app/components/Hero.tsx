@@ -13,7 +13,7 @@ export default function Hero() {
       <Navigation />
       <div id="hero" className="relative bg-gradient-to-br from-amber-900 via-amber-800 to-amber-900 min-h-screen flex items-center pt-16">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-top opacity-15"
+          className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{
             backgroundImage: `url('https://readdy.ai/api/search-image?query=Ultra%20professional%20modern%20accounting%20office%20with%20elegant%20executive%20desk%2C%20sophisticated%20financial%20documents%2C%20premium%20calculator%2C%20and%20warm%20golden%20lighting%20creating%20an%20atmosphere%20of%20trust%20and%20expertise%2C%20minimalist%20luxurious%20interior%20design%20with%20cream%20and%20gold%20accents%2C%20high-end%20business%20environment&width=1200&height=800&seq=hero-bg-premium&orientation=landscape')`
           }}
@@ -45,12 +45,14 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-              <button 
-                onClick={() => setIsBookingOpen(true)}
-                className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              <a
+                  href="https://outlook.office.com/book/TorresPService@torresptp.com/?ismsaljsauthenabled"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whitespace-nowrap bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Schedule Free Consultation
-              </button>
+              </a>
               <a 
                 href="#services" 
                 className="whitespace-nowrap border-2 border-amber-200 text-amber-200 hover:bg-amber-200 hover:text-amber-900 px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"

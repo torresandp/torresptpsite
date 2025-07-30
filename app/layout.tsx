@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Torres & P. PTP",
-  description: "Torres & P. All rights reserved",
+  description: "Torres & P. PTP LLC All rights reserved",
 };
 
 export default function RootLayout({
